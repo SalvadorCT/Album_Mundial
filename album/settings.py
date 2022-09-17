@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 from os import environ
+from datetime import timedelta
 
 load_dotenv()
 
@@ -149,3 +150,15 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # Para poner prefijo en el titulo del correo electronico
 EMAIL_SUBJECT_PREFIX = 'PROYECTO ALBUM '
+
+# Esta variable sirve para django rest framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication'
+    ]
+}
+
+# https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1, minutes=5, seconds=10)
+}

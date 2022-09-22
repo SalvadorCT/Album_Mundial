@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-w$)29o2i3_#etr26df73t040++ojo028!vt2*c3gn@_8b-i8o5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['album-mundial-salvador.herokuapp.com','127.0.0.1', 'localhost']
 
 
 # Application definition

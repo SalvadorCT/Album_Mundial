@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RegistroUsuarioView
+from .views import RegistroUsuarioView, RegistroFiguritasView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 #https://jwt.io/
@@ -8,4 +8,5 @@ urlpatterns = [
     # tendremos un endpoint que servira para validar el usuario y si es,
     # correcto nos devolvera un token
     path('iniciar-sesion', TokenObtainPairView.as_view()),
+    path('figuritas', RegistroFiguritasView.as_view()),
 ]
